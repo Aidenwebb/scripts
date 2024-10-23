@@ -62,7 +62,7 @@ if ($teamsWebhookURI)
     $Body = $card | ConvertTo-Json -Depth 10
 
     # Send the POST request to the Teams webhook
-    Invoke-RestMethod -ContentType 'application/json' -Uri $webhookURI -Method Post -Body $Body
+    Invoke-RestMethod -ContentType 'application/json' -Uri $teamsWebhookURI -Method Post -Body $Body
 }
 
 if ($clearHistory) {
