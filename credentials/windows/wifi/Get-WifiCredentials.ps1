@@ -1,7 +1,7 @@
 param(
     [string]$teamsWebhookURI,
-    [string]$returnResult = $false,
-    [bool]$clearHistory = $false
+    [switch]$returnResult,
+    [switch]$clearHistory
 )
 
 # Create an array to hold Wi-Fi data
